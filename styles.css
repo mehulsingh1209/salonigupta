@@ -1,12 +1,13 @@
-```css
-/* Portfolio Website Enhanced Styles - Mobile First Design */
+/* Enhanced Portfolio Website Styles - Fixed Color Contrast & Responsive Issues */
 :root {
     --navy: #0a192f;
     --ivory: #f8f8f0;
-    --gold: #d4af37;
+    --gold: #e6c258; /* Brightened gold for better contrast */
     --light-navy: #172a45;
     --shadow: rgba(2, 12, 27, 0.7);
     --transition: all 0.3s ease-in-out;
+    --text-dark: #333333; /* Darker text for better readability */
+    --text-light: #f8f8f0; /* Light text for dark backgrounds */
 }
 
 * {
@@ -17,19 +18,20 @@
 
 body {
     background-color: var(--ivory);
-    color: var(--navy);
+    color: var(--text-dark);
     line-height: 1.6;
     font-family: 'Lato', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     overflow-x: hidden;
     width: 100%;
 }
 
-/* Typography */
+/* Improved Typography for Better Readability */
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 1rem;
+    color: var(--navy); /* Consistent heading color */
 }
 
 h1 {
@@ -53,7 +55,7 @@ p {
     font-size: clamp(1rem, 1.5vw, 1.1rem);
 }
 
-/* Header & Navigation */
+/* Fixed Header & Navigation */
 header {
     background-color: var(--navy);
     color: var(--ivory);
@@ -93,17 +95,21 @@ nav {
     transform: translateY(-2px);
 }
 
+/* Fixed Navigation Links */
 .nav-links {
-    display: none; /* Hide on mobile */
+    display: none; /* Hidden on mobile, will show with media query */
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-links li {
-    margin-left: 2rem;
+    margin-left: 1.5rem; /* Reduced for better spacing */
+    display: inline-block;
 }
 
 .nav-links a {
-    color: var(--ivory);
+    color: var(--text-light);
     text-decoration: none;
     font-weight: 500;
     transition: var(--transition);
@@ -130,16 +136,17 @@ nav {
     width: 100%;
 }
 
-/* Mobile Navigation */
+/* Improved Mobile Navigation */
 .mobile-nav-toggle {
     display: block;
     background: transparent;
     border: none;
-    color: var(--ivory);
+    color: var(--text-light);
     font-size: 1.5rem;
     cursor: pointer;
     z-index: 1000;
     transition: var(--transition);
+    padding: 0.5rem;
 }
 
 .mobile-nav-toggle:hover {
@@ -152,7 +159,7 @@ nav {
     right: -100%;
     width: 70%;
     height: 100vh;
-    background-color: var(--light-navy);
+    background-color: var(--navy);
     padding: 6rem 2rem 2rem;
     transition: var(--transition);
     z-index: 99;
@@ -160,6 +167,7 @@ nav {
     flex-direction: column;
     justify-content: flex-start;
     box-shadow: -5px 0 25px rgba(0, 0, 0, 0.3);
+    overflow-y: auto;
 }
 
 .mobile-nav.open {
@@ -168,6 +176,8 @@ nav {
 
 .mobile-nav-links {
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .mobile-nav-links li {
@@ -175,7 +185,7 @@ nav {
 }
 
 .mobile-nav-links a {
-    color: var(--ivory);
+    color: var(--text-light);
     text-decoration: none;
     font-size: 1.2rem;
     font-weight: 500;
@@ -208,10 +218,10 @@ nav {
     visibility: visible;
 }
 
-/* Hero Section */
+/* Improved Hero Section */
 .hero {
     background-color: var(--navy);
-    color: var(--ivory);
+    color: var(--text-light);
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -227,7 +237,7 @@ nav {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(45deg, rgba(10, 25, 47, 0.8), rgba(23, 42, 69, 0.8));
+    background: linear-gradient(45deg, rgba(10, 25, 47, 0.9), rgba(23, 42, 69, 0.9));
     z-index: 1;
 }
 
@@ -244,6 +254,7 @@ nav {
 
 .hero h1 {
     margin-bottom: 0.5rem;
+    color: var(--text-light);
 }
 
 .hero h2 {
@@ -255,6 +266,7 @@ nav {
 .hero p {
     max-width: 600px;
     margin-bottom: 2rem;
+    color: var(--text-light);
 }
 
 .hero-buttons {
@@ -265,7 +277,7 @@ nav {
     max-width: 300px;
 }
 
-/* Buttons */
+/* Improved Buttons */
 .btn {
     display: inline-block;
     background-color: transparent;
@@ -291,14 +303,14 @@ nav {
     left: -100%;
     width: 100%;
     height: 100%;
-    background-color: rgba(212, 175, 55, 0.1);
+    background-color: rgba(230, 194, 88, 0.2);
     transition: var(--transition);
     z-index: -1;
 }
 
 .btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 7px 20px rgba(212, 175, 55, 0.2);
+    box-shadow: 0 7px 20px rgba(230, 194, 88, 0.3);
 }
 
 .btn:hover::before {
@@ -315,7 +327,7 @@ nav {
     color: var(--gold);
 }
 
-/* Common Section Styles */
+/* Common Section Styles - Improved */
 section {
     max-width: 1200px;
     margin: 0 auto;
@@ -335,6 +347,7 @@ section.visible {
     margin-bottom: 3rem;
     text-align: center;
     position: relative;
+    color: var(--navy);
 }
 
 .section-title::after {
@@ -353,7 +366,7 @@ section:hover .section-title::after {
     width: 120px;
 }
 
-/* About Section */
+/* About Section - Improved Contrast */
 .about {
     display: flex;
     flex-direction: column;
@@ -362,6 +375,10 @@ section:hover .section-title::after {
 
 .about-content {
     order: 2;
+}
+
+.about-content p {
+    color: var(--text-dark);
 }
 
 .about-image {
@@ -388,9 +405,9 @@ section:hover .section-title::after {
     transform: scale(1.03);
 }
 
-/* Resume Section */
+/* Resume Section - Improved */
 .resume {
-    background-color: rgba(248, 248, 240, 0.8);
+    background-color: rgba(248, 248, 240, 0.6);
     position: relative;
     overflow: hidden;
 }
@@ -436,11 +453,12 @@ section:hover .section-title::after {
 .resume-item h4 {
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
+    color: var(--text-dark);
 }
 
 .resume-item h5 {
     font-size: 1rem;
-    color: var(--gold);
+    color: var(--navy);
     font-weight: 600;
     margin-bottom: 0.5rem;
 }
@@ -454,22 +472,24 @@ section:hover .section-title::after {
 
 .resume-item p {
     font-size: 0.95rem;
+    color: var(--text-dark);
 }
 
 .resume-item ul {
     list-style-position: inside;
     margin-top: 0.5rem;
+    padding-left: 0.5rem;
 }
 
 .resume-item ul li {
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.5rem;
     font-size: 0.95rem;
+    color: var(--text-dark);
 }
 
-/* Skills Section */
+/* Skills Section - Improved Contrast */
 .skills {
     background-color: var(--navy);
-    color: var(--ivory);
     position: relative;
     overflow: hidden;
 }
@@ -486,7 +506,7 @@ section:hover .section-title::after {
 }
 
 .skills .section-title {
-    color: var(--ivory);
+    color: var(--text-light);
 }
 
 .skills-container {
@@ -514,10 +534,11 @@ section:hover .section-title::after {
 
 .skill-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.2);
+    box-shadow: 0 5px 15px rgba(230, 194, 88, 0.3);
+    background-color: rgba(23, 42, 69, 0.9);
 }
 
-/* Contact Section */
+/* Contact Section - Improved */
 .contact {
     background: linear-gradient(to bottom, var(--ivory), #f0f0e6);
     position: relative;
@@ -531,7 +552,7 @@ section:hover .section-title::after {
     width: 100%;
     height: 100%;
     background-image: 
-        radial-gradient(circle at 10% 10%, rgba(212, 175, 55, 0.05) 0%, transparent 80%),
+        radial-gradient(circle at 10% 10%, rgba(230, 194, 88, 0.05) 0%, transparent 80%),
         radial-gradient(circle at 90% 90%, rgba(10, 25, 47, 0.05) 0%, transparent 80%);
     z-index: -1;
 }
@@ -553,6 +574,7 @@ section:hover .section-title::after {
 
 .form-group {
     margin-bottom: 1.5rem;
+    position: relative;
 }
 
 label {
@@ -575,7 +597,7 @@ input, textarea {
 input:focus, textarea:focus {
     outline: none;
     border-color: var(--gold);
-    box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.2);
+    box-shadow: 0 0 0 2px rgba(230, 194, 88, 0.2);
 }
 
 textarea {
@@ -583,9 +605,21 @@ textarea {
     resize: vertical;
 }
 
+/* Error message styling */
+.error-message {
+    color: #e74c3c;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+.form-group.error input,
+.form-group.error textarea {
+    border-color: #e74c3c;
+}
+
 button {
     background-color: var(--navy);
-    color: var(--ivory);
+    color: var(--text-light);
     border: none;
     padding: 1rem 2rem;
     border-radius: 4px;
@@ -615,12 +649,30 @@ button:hover {
 
 .contact-info p {
     margin-bottom: 0.5rem;
+    color: var(--text-dark);
 }
 
-/* Footer */
+/* Form Success Message */
+.form-success {
+    text-align: center;
+    padding: 2rem;
+}
+
+.form-success i {
+    font-size: 3rem;
+    color: #2ecc71;
+    margin-bottom: 1rem;
+}
+
+.form-success h3 {
+    color: var(--navy);
+    margin-bottom: 1rem;
+}
+
+/* Footer - Improved */
 footer {
     background-color: var(--navy);
-    color: var(--ivory);
+    color: var(--text-light);
     text-align: center;
     padding: 2rem 1rem;
 }
@@ -633,7 +685,7 @@ footer {
 }
 
 .social-links a {
-    color: var(--ivory);
+    color: var(--text-light);
     font-size: 1.5rem;
     transition: var(--transition);
     width: 40px;
@@ -660,7 +712,7 @@ footer {
     text-decoration: none;
 }
 
-/* Scroll to top button */
+/* Scroll to top button - Fixed */
 .scroll-top {
     position: fixed;
     bottom: -60px;
@@ -687,10 +739,10 @@ footer {
 
 .scroll-top:hover {
     transform: translateY(-5px);
-    background-color: var(--ivory);
+    background-color: var(--text-light);
 }
 
-/* Animations */
+/* Fixed Animations */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -712,7 +764,6 @@ footer {
 }
 
 .fade-in {
-    opacity: 0;
     animation: fadeIn 1s ease forwards;
 }
 
@@ -738,7 +789,7 @@ footer {
     opacity: 1;
 }
 
-/* Media Queries */
+/* Enhanced Media Queries for better responsiveness */
 @media screen and (min-width: 768px) {
     .nav-links {
         display: flex;
@@ -760,6 +811,7 @@ footer {
     .about-content {
         order: 1;
         flex: 1;
+        padding-right: 2rem;
     }
     
     .about-image {
@@ -812,52 +864,26 @@ footer {
     }
 }
 
-/* Print Styles */
-@media print {
-    header, footer, .contact, .scroll-top {
+/* Make all sections visible by default for browsers with JS disabled */
+.no-js section,
+.no-js .skill-item {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Fix for mobile nav issues */
+@media screen and (max-width: 767px) {
+    .nav-links {
         display: none;
     }
     
-    body, html {
-        background-color: white;
-        color: black;
-        font-size: 12pt;
-    }
-    
-    section {
-        padding: 1rem 0;
-        page-break-inside: avoid;
-    }
-    
-    .resume {
-        background-color: white;
-    }
-    
-    .resume::before {
-        display: none;
-    }
-    
-    .section-title::after {
-        background-color: black;
-    }
-    
-    .skills {
-        background-color: white;
-        color: black;
-    }
-    
-    .skills::before {
-        display: none;
-    }
-    
-    .skill-item {
-        background-color: #f1f1f1;
-        color: black;
-        border: 1px solid #ddd;
-    }
-    
-    h1, h2, h3, h4, h5, h6 {
-        color: black;
+    .mobile-nav-toggle {
+        display: block;
     }
 }
-```
+
+/* Fix for immediate loading */
+body.loaded section {
+    opacity: 1;
+    transform: translateY(0);
+}
