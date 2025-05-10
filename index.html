@@ -3,27 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Saloni Gupta - MBA Graduate, Operations Manager and Business Strategist based in Kathmandu, Nepal">
     <title>Saloni Gupta | MBA Portfolio | Operations Manager | Business Strategist</title>
     <!-- Google Fonts - Playfair Display for headings and Lato for body text -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <!-- Your existing styles are replaced with our enhanced CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Page transition overlay -->
+    <div class="page-transition"></div>
+    
+    <!-- Custom cursor for desktop -->
+    <div class="custom-cursor"></div>
+
     <!-- Header Section -->
     <header>
         <nav>
             <div class="logo">Saloni Gupta</div>
             <!-- Desktop Navigation -->
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#resume">Resume</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home" class="interactive">Home</a></li>
+                <li><a href="#about" class="interactive">About</a></li>
+                <li><a href="#resume" class="interactive">Resume</a></li>
+                <li><a href="#skills" class="interactive">Skills</a></li>
+                <li><a href="#contact" class="interactive">Contact</a></li>
             </ul>
+            <!-- Dark Mode Toggle -->
+            <button class="dark-mode-toggle interactive" aria-label="Toggle dark mode" aria-pressed="false">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+            </button>
             <!-- Mobile Navigation Toggle -->
-            <button class="mobile-nav-toggle" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="mobile-nav-toggle interactive" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
             </button>
         </nav>
@@ -50,8 +64,8 @@
             <h2>MBA Graduate | Operations Manager | Business Strategist</h2>
             <p>A dedicated operations professional with expertise in business administration, process optimization, and strategic management. With experience in educational administration and dental industry operations, I bring a unique perspective to business challenges.</p>
             <div class="hero-buttons">
-                <a href="#contact" class="btn">Get In Touch</a>
-                <a href="#resume" class="btn">View Resume</a>
+                <a href="#contact" class="btn interactive">Get In Touch</a>
+                <a href="#resume" class="btn interactive">View Resume</a>
             </div>
         </div>
     </section>
@@ -60,13 +74,13 @@
     <section id="about" class="animate-on-scroll" data-animation="fade-in">
         <h2 class="section-title">About Me</h2>
         <div class="about">
-            <div class="about-content slide-in-left">
+            <div class="about-content" data-animation="slide-in-left">
                 <p>I am a recent MBA graduate from Uniglobe College with a strong foundation in operations management and business administration. With over 6 years of experience spanning educational administration and business operations, I excel at optimizing processes, managing teams, and implementing strategic initiatives.</p>
                 <p>My professional journey has equipped me with a diverse skill set including financial management, account management, and operational excellence. I am passionate about leveraging data-driven insights to improve business performance and drive sustainable growth.</p>
                 <p>I have experience in educational administration, banking, and most recently in operations management at Hilife International Pvt. Ltd., where I managed inventory and supply chain operations while building strong relationships with key accounts. Whether it's streamlining operations, enhancing customer relationships, or developing strategic plans, I approach each challenge with analytical thinking and creative problem-solving abilities.</p>
             </div>
-            <div class="about-image slide-in-right">
-                <img src="/api/placeholder/500/600" alt="Professional headshot placeholder" loading="lazy">
+            <div class="about-image" data-animation="slide-in-right">
+                <img src="/api/placeholder/500/600" alt="Professional headshot of Saloni Gupta" data-src="/api/placeholder/500/600" loading="lazy">
             </div>
         </div>
     </section>
@@ -74,18 +88,26 @@
     <!-- Resume Section -->
     <section id="resume" class="resume animate-on-scroll" data-animation="fade-in">
         <h2 class="section-title">Resume</h2>
+        
+        <!-- Portfolio filter buttons -->
+        <div class="portfolio-filter">
+            <button class="active" data-filter="all">All</button>
+            <button data-filter="education">Education</button>
+            <button data-filter="experience">Experience</button>
+        </div>
+        
         <div class="resume-grid">
             <div class="resume-section">
                 <h3>Education</h3>
                 
-                <div class="resume-item animate-on-scroll" data-animation="slide-in-left">
+                <div class="resume-item portfolio-item education" data-animation="slide-in-left">
                     <h4>Uniglobe College, Kathmandu, Nepal</h4>
                     <h5>Master of Business Administration</h5>
                     <div class="date">May 2022 - Mar 2025</div>
                     <p>Grade: 3.63</p>
                 </div>
                 
-                <div class="resume-item animate-on-scroll" data-animation="slide-in-left">
+                <div class="resume-item portfolio-item education" data-animation="slide-in-left">
                     <h4>Birgunj Public College, Birgunj</h4>
                     <h5>Bachelor of Business Administration - BBA</h5>
                     <div class="date">Sep 2016 - Oct 2020</div>
@@ -93,14 +115,14 @@
                     <p>Grade: 3.11</p>
                 </div>
                 
-                <div class="resume-item animate-on-scroll" data-animation="slide-in-left">
+                <div class="resume-item portfolio-item education" data-animation="slide-in-left">
                     <h4>National Infotech College</h4>
                     <h5>+2 Science</h5>
                     <div class="date">Aug 2014 - Sep 2016</div>
                     <p>Grade: 67%</p>
                 </div>
                 
-                <div class="resume-item animate-on-scroll" data-animation="slide-in-left">
+                <div class="resume-item portfolio-item education" data-animation="slide-in-left">
                     <h4>Shree Siddhartha Ma. Vi., Birgunj</h4>
                     <h5>SLC</h5>
                     <div class="date">Jun 2014</div>
@@ -111,7 +133,7 @@
             <div class="resume-section">
                 <h3>Experience</h3>
                 
-                <div class="resume-item animate-on-scroll" data-animation="slide-in-right">
+                <div class="resume-item portfolio-item experience" data-animation="slide-in-right">
                     <h4>Hilife International Pvt. Ltd.</h4>
                     <h5>Operations Manager</h5>
                     <div class="date">Mar 2024 - Sep 2024 · 7 mos</div>
@@ -125,7 +147,7 @@
                     </ul>
                 </div>
                 
-                <div class="resume-item animate-on-scroll" data-animation="slide-in-right">
+                <div class="resume-item portfolio-item experience" data-animation="slide-in-right">
                     <h4>Hilife International Pvt. Ltd.</h4>
                     <h5>Intern</h5>
                     <div class="date">Dec 2023 - Feb 2024 · 3 mos</div>
@@ -135,7 +157,7 @@
                     </ul>
                 </div>
                 
-                <div class="resume-item animate-on-scroll" data-animation="slide-in-right">
+                <div class="resume-item portfolio-item experience" data-animation="slide-in-right">
                     <h4>Baba English Secondary School</h4>
                     <h5>Teaching Specialist</h5>
                     <div class="date">Jul 2014 - May 2021 · 6 yrs 11 mos</div>
@@ -149,7 +171,7 @@
                     </ul>
                 </div>
                 
-                <div class="resume-item animate-on-scroll" data-animation="slide-in-right">
+                <div class="resume-item portfolio-item experience" data-animation="slide-in-right">
                     <h4>Global IME Bank Limited</h4>
                     <h5>Intern</h5>
                     <div class="date">Oct 2019 - Dec 2019 · 3 mos</div>
@@ -186,43 +208,96 @@
         </div>
     </section>
 
+    <!-- Portfolio Gallery Section -->
+    <section id="portfolio" class="portfolio animate-on-scroll" data-animation="fade-in">
+        <h2 class="section-title">Portfolio</h2>
+        <div class="gallery-container">
+            <div class="portfolio-gallery" tabindex="0">
+                <div class="gallery-item active">
+                    <img src="/api/placeholder/800/500" alt="Project 1" data-src="/api/placeholder/800/500">
+                    <div class="gallery-caption">
+                        <h3>Process Optimization Project</h3>
+                        <p>Led a team to optimize inventory management processes, resulting in 20% reduction in costs.</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="/api/placeholder/800/500" alt="Project 2" data-src="/api/placeholder/800/500">
+                    <div class="gallery-caption">
+                        <h3>Strategic Business Plan</h3>
+                        <p>Developed a comprehensive business strategy for dental supply distribution.</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="/api/placeholder/800/500" alt="Project 3" data-src="/api/placeholder/800/500">
+                    <div class="gallery-caption">
+                        <h3>Educational Administration</h3>
+                        <p>Streamlined administrative processes for school operations, improving efficiency by 15%.</p>
+                    </div>
+                </div>
+                <button class="gallery-prev interactive" aria-label="Previous slide">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="gallery-next interactive" aria-label="Next slide">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Section -->
     <section id="contact" class="contact animate-on-scroll" data-animation="fade-in">
         <h2 class="section-title">Get In Touch</h2>
-        <div class="contact-form">
-            <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required>
+        <div class="contact-container">
+            <form id="contact-form" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="interactive">Send Message</button>
+            </form>
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <p><strong>Email:</strong> saloni.gupta@email.com</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <p><strong>Phone:</strong> +977 98XXXXXXXX</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p><strong>Location:</strong> Kathmandu, Nepal</p>
+                </div>
+                <div class="social-links contact-socials">
+                    <a href="#" class="interactive" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="interactive" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="interactive" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" class="interactive" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="subject">Subject</label>
-                <input type="text" id="subject" name="subject" required>
-            </div>
-            <div class="form-group">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" required></textarea>
-            </div>
-            <button type="submit">Send Message</button>
-        </div>
-        <div class="contact-info">
-            <h3>Contact Information</h3>
-            <p><strong>Email:</strong> saloni.gupta@email.com</p>
-            <p><strong>Phone:</strong> +977 98XXXXXXXX</p>
-            <p><strong>Location:</strong> Kathmandu, Nepal</p>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
         <div class="social-links">
-            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
-            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="interactive" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="interactive" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="interactive" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="#" class="interactive" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
         </div>
         <div class="footer-text">
             <p>&copy; 2025 Saloni Gupta. All Rights Reserved.</p>
@@ -230,12 +305,12 @@
     </footer>
 
     <!-- Scroll to Top Button -->
-    <div class="scroll-top" aria-label="Scroll to top">
+    <div class="scroll-top interactive" aria-label="Scroll to top">
         <i class="fas fa-arrow-up"></i>
     </div>
 
-    <!-- Font Awesome for icons -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+    <!-- Font Awesome for icons (moved to head for better performance) -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script> -->
     <!-- Your JavaScript file -->
     <script src="script.js"></script>
 </body>
